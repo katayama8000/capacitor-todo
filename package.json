@@ -1,0 +1,23 @@
+{
+  "name": "capacitor-todo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:start": "npm run build && npx cap sync @capacitor-community/electron && npm --prefix electron run electron:start",
+    "electron:pack": "npm run build && npx cap sync @capacitor-community/electron && npm --prefix electron run electron:pack"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@capacitor-community/electron": "^5.0.1",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/preferences": "^8.0.1"
+  }
+}

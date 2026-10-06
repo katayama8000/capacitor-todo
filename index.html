@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Capacitor Todo</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>Todo</h1>
+        <p id="summary" class="summary"></p>
+      </header>
+
+      <!-- New todo input. Submitting the form adds the todo. -->
+      <form id="new-todo-form" class="new-todo-form" autocomplete="off">
+        <input
+          id="new-todo-input"
+          class="new-todo-input"
+          type="text"
+          placeholder="What needs to be done?"
+          maxlength="200"
+          aria-label="New todo"
+        />
+        <button class="add-button" type="submit">Add</button>
+      </form>
+
+      <ul id="todo-list" class="todo-list"></ul>
+      <p id="empty-state" class="empty-state">Nothing here yet. Add your first todo.</p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
